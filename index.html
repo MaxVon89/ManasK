@@ -100,6 +100,14 @@
     .research-item .meta { display: block; margin-bottom: 12px; color: var(--blue); }
     .misc-list { display: flex; flex-wrap: wrap; gap: 10px; }
     .misc-item { min-width: min(100%, 210px); padding: 14px 16px; background: var(--raised); color: var(--text); font-size: 14px; }
+    .socials-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+    .social-link { min-height: 82px; justify-content: flex-start; border-color: color-mix(in srgb, var(--social-accent) 38%, transparent); }
+    .social-link:hover { border-color: var(--social-accent); background: color-mix(in srgb, var(--social-accent) 12%, var(--raised)); }
+    .social-link-instagram { --social-accent: #e4405f; }
+    .social-link-letterboxd { --social-accent: #00a83f; }
+    .social-icon { display: grid; width: 42px; height: 42px; flex: 0 0 auto; place-items: center; background: color-mix(in srgb, var(--social-accent) 16%, transparent); color: var(--social-accent); }
+    .social-icon svg { width: 21px; height: 21px; }
+    .social-link .contact-link-copy small { color: var(--secondary); }
 
     .contact { position: relative; display: grid; min-height: 195px; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 28px; overflow: hidden; margin-bottom: 48px; padding: clamp(24px, 5vw, 48px); background: var(--surface); box-shadow: var(--shadow); }
     .contact::after { position: absolute; top: -110px; right: 10%; width: 280px; aspect-ratio: 1; border: 1px solid rgb(244 71 18 / 17%); content: ""; transform: rotate(45deg); pointer-events: none; }
@@ -231,12 +239,17 @@
         </div>
       </section>
       
-      <section class="section" id="miscellaneous" aria-labelledby="miscellaneous-title">
-        <div class="section-heading"><div><p class="eyebrow">Off work  :))</p><h2 id="miscellaneous-title">Other Socials</h2></div></div>
-        <div class="misc-list">
-          <a class="contact-link contact-link-primary" href="https://www.instagram.com/manas.xgr/"><span class="contact-link-copy"><strong>Instagram</strong></span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
-          <a class="contact-link contact-link-primary" href="https://letterboxd.com/_MMK87_/"><span class="contact-link-copy"><strong>Letterboxd</strong></span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
-          
+      <section class="section" id="socials" aria-labelledby="socials-title">
+        <div class="section-heading"><div><p class="eyebrow">Off work</p><h2 id="socials-title">Other Socials</h2></div></div>
+        <div class="socials-list">
+          <a class="contact-link social-link social-link-instagram" href="https://www.instagram.com/manas.xgr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram, @manas.xgr">
+            <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg></span>
+            <span class="contact-link-copy"><strong>Instagram</strong><small>@manas.xgr</small></span>
+          </a>
+          <a class="contact-link social-link social-link-letterboxd" href="https://letterboxd.com/_MMK87_/" target="_blank" rel="noopener noreferrer" aria-label="Letterboxd profile, underscore MMK87 underscore">
+            <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="7" cy="12" r="5" fill="#ff8000" stroke="none" /><circle cx="12" cy="12" r="5" fill="#00e054" stroke="none" /><circle cx="17" cy="12" r="5" fill="#40bcf4" stroke="none" /></svg></span>
+            <span class="contact-link-copy"><strong>Letterboxd</strong><small>@_MMK87_</small></span>
+          </a>
         </div>
       </section>
     
